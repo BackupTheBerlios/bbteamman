@@ -6,8 +6,14 @@
  * @author Hartjenstein
  */
 public class Team {
-	String teamname;
-	Player[] teamlist;
-	Personal[] personallist;
+	private String teamname;
+	private Player[] teamlist;
+	private Personal[] personallist;
+	public Team(String teamname) {
+		this.teamname=teamname;
+	}
+	public String getTeamname() {
+		return teamname;
+	}
 
 }

@@ -1,7 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
+import javax.swing.table.*;
 
 /*
  * Created on 14.06.2004
@@ -14,6 +14,7 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 	public JTextField money,minplayer;
 	public JComboBox combo;
 	private Gui parent;
+	private JTable table;
   	public NewTeamDialog_chooseRace(Gui parent) {
   		super(parent,"Choose Team race",true);
   		this.parent=parent;
@@ -28,24 +29,25 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 		temp = new JLabel("Rasse:");
 		temp.setBounds(5,5,40,20);
 		this.getContentPane().add(temp);
-		
-		Object[] combotest = {"","test","test2"};
-		combo = new JComboBox(combotest);
+				
+		combo = new JComboBox(Teamdata.getTeamNames());
 		combo.setBounds(45,5,150,20);
+		combo.addActionListener(this);
+		combo.setActionCommand("racelist");
 		this.getContentPane().add(combo);
 		
 		JButton cancel = new JButton("Cancel",new ImageIcon("D:/Programme/eclipse/workspace/bb verwaltung/help.gif"));
 		cancel.addActionListener(this);
 		cancel.setActionCommand("cancel");
 		cancel.setSize(90,30);
-		cancel.setLocation(this.getWidth()-cancel.getWidth()-15,this.getHeight()-cancel.getHeight()-35);
+		cancel.setLocation(this.getWidth()-cancel.getWidth()-10,this.getHeight()-cancel.getHeight()-30);
 		this.getContentPane().add(cancel);
 	
 		JButton save = new JButton("Continue",new ImageIcon("D:/Programme/eclipse/workspace/bb verwaltung/help.gif"));
 		save.addActionListener(this);
 		save.setActionCommand("continue");
 		save.setSize(90,30);
-		save.setLocation(this.getWidth()-cancel.getWidth()-cancel.getWidth()-10,this.getHeight()-save.getHeight()-35);
+		save.setLocation(this.getWidth()-cancel.getWidth()-cancel.getWidth()-15,this.getHeight()-save.getHeight()-30);
 		this.getContentPane().add(save);
 		Object[][] data = {
 				{"",new Integer(16),new Integer(40000),"Goblin", new Integer(6), new Integer(2), new Integer(3), new Integer(7),"Lebensmüde,Ausweichen,Kleinwüchsig"},
@@ -54,7 +56,7 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 				{"Trainingsmarke", "8", new Integer(60000), "", "", "", "", "", ""}	
 		};
 		String[] columnNames = {"Description","#","Cost","Position","M","ST","AG","RW","Abillities"};
-		JTable table = new JTable(data, columnNames);		
+		table = new JTable(data, columnNames);		
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		table.getColumnModel().getColumn(0).setPreferredWidth(100);
 		table.getColumnModel().getColumn(1).setPreferredWidth(25);		
@@ -85,6 +87,12 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 			}
 		} else if (cmd.equals("cancel")) {
 			this.dispose();
-		}
+		} else if (cmd.equals("racelist")) {
+			TeamInformation team = Teamdata.getTeam(combo.getSelectedIndex());
+			System.out.println(team.getTeamname());
+			table = null;
+			table = new JTable();
+			
+		} 
 	}
 }
