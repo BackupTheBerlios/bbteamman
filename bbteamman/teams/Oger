@@ -1,0 +1,9 @@
+Oger
+[Player]
+8	40000	Goblin	6	2	3	7	Lebensmüde,Ausweichen,Kleinwüchsig
+8	120000	Oger	5	5	2	9	Knochenbrecher,Robust,Blöd,Mitspieler werfen
+[Personal]
+Zauberer	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	70000

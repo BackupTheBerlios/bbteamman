@@ -1,0 +1,8 @@
+Halblinge
+[Player]
+16	30000	Halbling	5	2	3	6	Lebensmüde,Ausweichen,Kleinwüchsig
+[Personal]
+Meisterkoch	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	60000

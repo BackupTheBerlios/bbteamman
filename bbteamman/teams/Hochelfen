@@ -1,0 +1,11 @@
+Hochelfen
+[Player]
+12	70000	Feldspieler	6	3	4	8	Keine
+2	100000	Drachenkrieger	7	3	4	8	Blocken
+2	90000	Löwenkrieger	8	3	4	7	Fangsicher
+2	80000	Phönixkrieger	6	3	4	8	Wurfsicher
+[Personal]
+Zauberer	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	50000

@@ -1,0 +1,9 @@
+Echsenmenschen
+[Player]
+6	80000	Saurus	6	4	1	9	Keine
+12	60000	Skink	8	2	3	7	Ausweichen,Kleinwüchsig
+[Personal]
+Zauberer	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	60000

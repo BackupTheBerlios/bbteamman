@@ -1,0 +1,11 @@
+Orks
+[Player]
+12	50000	Feldspieler	5	3	5	9	Keine
+4	80000	Blitzer	6	3	3	9	Blocken
+4	80000	Schwarzorks	4	4	2	9	Keine
+2	70000	Werfer	5	3	5	8	Ballgefühl,Wurfsicher
+[Personal]
+Zauberer	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	60000

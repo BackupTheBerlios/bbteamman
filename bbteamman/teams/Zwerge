@@ -1,0 +1,11 @@
+Zwerge
+[Player]
+12	70000	Langbärte	4	3	2	9	Blocken,Tackle,Robust
+2	80000	Läufer	6	3	3	8	Ballgefühl,Robust
+2	80000	Blitzer	5	3	3	9	Blocken,Robust
+2	90000	Trollslayer	5	3	2	8	Blocken,Rasend,Unerschrocken,Robust
+[Personal]
+Alchemist	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	40000

@@ -1,0 +1,10 @@
+Chaoszwerge
+[Player]
+6	70000	Chaoszwerge	4	3	2	9	Blocken,Tackle,Robust
+12	40000	Hobgoblins	6	3	3	7	Keine
+2	130000	Stierzentauren	6	4	2	9	Sprinten,Sprintsicher,Robust
+[Personal]
+Alchemist	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	50000

@@ -1,0 +1,8 @@
+Goblins
+[Player]
+16	40000	Goblin	6	2	3	7	Lebensmüde,Ausweichen,Kleinwüchsig
+[Personal]
+Zauberer	1	150000
+Sani	1	50000
+[Other]
+Trainingsmarke	8	60000
