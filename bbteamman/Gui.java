@@ -15,6 +15,7 @@ public class Gui extends JFrame implements ActionListener {
 		super("BloodBowl Verwaltung");
 		this.setBounds(0,0,600,400);
 		this.getContentPane().setLayout(new BorderLayout());
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setJMenuBar(new Menu(this));
 		JToolBar toolbar = new JToolBar();
 		JButton button = new JButton();
@@ -44,7 +45,7 @@ public class Gui extends JFrame implements ActionListener {
 			String cmd = e.getActionCommand();
 			if (cmd.startsWith("app")) {
 				if (cmd.equals("app.new")) {
-					new NewTeamDialog(this);
+					new NewTeamDialog_chooseRace(this);
 				} else if (cmd.equals("app.preferences")) {
 					new Preference_gui(this);
 				} else if (cmd.equals("app.close")) {
