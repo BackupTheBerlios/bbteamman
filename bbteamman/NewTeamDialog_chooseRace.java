@@ -13,13 +13,14 @@ import javax.swing.*;
 public class NewTeamDialog_chooseRace extends JDialog implements ActionListener {
 	public JTextField money,minplayer;
 	public JComboBox combo;
+	private Gui parent;
   	public NewTeamDialog_chooseRace(Gui parent) {
-  		super(parent,"New Team",true);
-		this.setBounds(10,10,400,200);
+  		super(parent,"Choose Team race",true);
+  		this.parent=parent;
+		this.setBounds(10,10,400,250);
 		this.getContentPane().setLayout(null);
 		this.setResizable(false);
-		addComponents();
-		
+		addComponents();		
 		this.show();
   	}
   	public void addComponents() {
@@ -28,7 +29,8 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 		temp.setBounds(5,5,40,20);
 		this.getContentPane().add(temp);
 		
-		combo = new JComboBox();
+		Object[] combotest = {"","test","test2"};
+		combo = new JComboBox(combotest);
 		combo.setBounds(45,5,150,20);
 		this.getContentPane().add(combo);
 		
@@ -39,10 +41,10 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 		cancel.setLocation(this.getWidth()-cancel.getWidth()-15,this.getHeight()-cancel.getHeight()-35);
 		this.getContentPane().add(cancel);
 	
-		JButton save = new JButton("continue",new ImageIcon("D:/Programme/eclipse/workspace/bb verwaltung/help.gif"));
+		JButton save = new JButton("Continue",new ImageIcon("D:/Programme/eclipse/workspace/bb verwaltung/help.gif"));
 		save.addActionListener(this);
 		save.setActionCommand("continue");
-		save.setSize(80,30);
+		save.setSize(90,30);
 		save.setLocation(this.getWidth()-cancel.getWidth()-cancel.getWidth()-10,this.getHeight()-save.getHeight()-35);
 		this.getContentPane().add(save);
 		Object[][] data = {
@@ -76,6 +78,11 @@ public class NewTeamDialog_chooseRace extends JDialog implements ActionListener 
 	public void actionPerformed(ActionEvent arg0) {
 		String cmd = arg0.getActionCommand();
 		if (cmd.equals("continue")) {
+			if (combo.getSelectedIndex()>0) {
+				this.hide();
+				new NewTeamDialog(parent,combo.getSelectedIndex());
+				this.dispose();
+			}
 		} else if (cmd.equals("cancel")) {
 			this.dispose();
 		}
